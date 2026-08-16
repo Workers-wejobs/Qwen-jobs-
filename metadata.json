@@ -1,0 +1,6 @@
+{
+  "name": "QwenJobs",
+  "description": "Global Freelance & Micro-Job Marketplace where freelancers discover jobs, submit work, complete monthly challenges, and earn verified rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

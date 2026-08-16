@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --card: #ffffff;
+    --card-elevated: #ffffff;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Geometric Dot Pattern */
+.bg-geometric-grid {
+  background-image: radial-gradient(#4f46e5 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Sponsor Marquee Animation */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 60px;
+  height: 40px;
+  animation: qwenjobs-marquee 30s linear infinite;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.marquee-content img {
+  flex: 0 0 auto;
+  height: 22px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+@keyframes qwenjobs-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
